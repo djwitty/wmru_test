@@ -1,0 +1,248 @@
+//@import 'reset.styl'
+@import 'libs.styl'
+@import 'variables.styl'
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap&subset=cyrillic')
+@font-face
+  font-family: 'Roboto-Thin'
+  src: url('../fonts/Roboto-Thin.ttf')  format('truetype') /* Safari, Android, iOS */
+//Reset
+body, html
+  margin: 0
+  padding: 0
+  border: 0 none
+  font-family: 'Roboto', sans-serif
+  font-size: 100%
+  vertical-align: baseline
+ul, li
+  list-style: none
+//Global
+.icon
+  text-align: center
+  img
+    width: 47px
+    height: 47px
+textarea#about-me
+  padding: 24px 21px
+  margin-bottom: 70px
+  width: 478px
+  min-height: 132px
+  border: 1px solid #e5e5e5
+  border-radius: 5px
+  font-size: 20px
+  color: #c8c8c8
+h1
+  font-family: 'Roboto-Thin', sans-serif
+  color: #000
+  font-size: 70px
+  font-weight: normal
+  margin: 0
+  padding-top: 130px
+h2, h3
+  text-align: center
+  color: #1c1c1c
+  font-size: 30px
+  font-weight: 300
+h3
+  font-size: 16px
+.btn
+  width: 116px
+  height: 51px
+  background-color: #435993
+  border: 0 none
+  border-radius: 10px
+  color: #fff
+  font-size: 16px
+  font-weight: 300
+  cursor pointer
+  outline: 0 none
+.wrapper
+  .header
+    background: url('../img/img/bg2.png') no-repeat 0 80px
+    background-size: 100% auto
+    height: 260px
+    text-align: center
+  nav.main-menu
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 80px
+    background-color: #fff
+    li
+      padding: 0 34px
+      a
+        color: #435993
+        font-size: 14px
+        font-weight: 300
+        text-decoration: none
+      a.active, a:hover
+        color:#1c1c1c
+  .content
+    padding-top: 90px
+    max-width: 768px
+    margin: 0 auto
+    //Profile Information
+    .profile-info
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .info
+        position relative
+      .select-box
+        margin-top: 25px
+        border: 1px solid #e5e5e5
+        border-radius: 5px
+      input, select
+        width: 520px
+        height: 60px
+        font-family: 'Roboto', sans-serif
+        color: #c8c8c8
+        text-align: center
+      input
+        margin-top: 25px
+        border: 1px solid #e5e5e5
+        border-radius: 5px
+      input:focus
+        border: 1px solid #435993
+        outline: 0 none
+      input:focus ~ .floating-label,
+      input:not(:focus):valid ~ .floating-label
+        top: 25px
+        bottom: 10px
+        left: 0
+        font-size: 14px
+        opacity: 1
+      .floating-label
+        position: absolute
+        pointer-events: none
+        left: 0
+        right: 0
+        top: 43px
+        font-family: 'Roboto', sans-serif
+        font-size: 24px
+        font-weight: 400
+        color: #adadad
+        text-align: center
+        transition: 0.2s ease all
+      select
+        width: 320px
+        text-align-last: center
+        outline: 0 none
+        border: 0 none
+        color: #c8c8c8
+        font-size: 24px
+        background-image:
+          linear-gradient(45deg, #ffffff 50%, #435993 50%),
+          linear-gradient(135deg, #435993 50%, #ffffff 50%)
+        background-position:
+          calc(100% - 20px) calc(1em + 2px),
+          calc(100% - 15px) calc(1em + 2px)
+        background-size:
+          5px 5px,
+          5px 5px
+        background-repeat: no-repeat
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        option
+          color: #435993
+        &:focus
+          background-image:
+            linear-gradient(-135deg, transparent 50%, #435993 50%),
+            linear-gradient(-45deg, #435993 50%, transparent 50%)
+          background-position:
+            calc(100% - 18px) calc(1em + 2px),
+            calc(100% - 23px) calc(1em + 2px)
+          outline: 0
+      select::-ms-expand
+        display: none
+    .profile-experience
+      padding-top: 75px
+      ul
+        text-align: center
+        li
+          position relative
+          float: left
+          text-align: left 
+          width: 33%
+          line-height: 200%
+          font-family: 'Roboto', sans-serif
+          font-size: 16px
+          font-weight: 300
+          label
+            padding-left: 10px
+          label:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 5px
+            background: url('../img/icons/checkbox.svg') no-repeat left top
+            width: 20px
+            height: 21px
+          input[type=checkbox]:checked + label:before
+            background-position: right top
+        li:hover
+          label:before
+            background-position: center top
+    .profile-js-level
+      padding-top: 135px
+      text-align: center
+      .level-range
+        ul
+          clear: both
+          height: 50px
+          padding: 0
+          li
+            width: 25%
+            float: left
+            text-align: left
+            label
+              font-size: 13px
+          li:last-child
+            text-align: right
+        input[type=range]
+          background: url('../img/icons/range.svg') no-repeat 0 0
+          width: 100%
+    .profile-about-me
+      padding-top: 75px
+      padding-bottom: 75px
+      text-align: center
+
+.ui-selectmenu-menu,
+.ui-selectmenu-button.ui-button
+  text-align: center
+  color:#435993
+.ui-menu .ui-menu-item-wrapper
+  background: #fff
+  color: #435993
+.ui-widget.ui-widget-content
+  overflow-y: scroll
+  height: 300px
+.ui-button,
+.ui-button:hover,
+.ui-button:focus
+  background: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 60px
+  padding: 0
+#year-of-birth-button:focus
+  border: 0 none
+  outline: 0 none
+.ui-button.ui-state-active:hover
+  border: 0 none
+.ui-selectmenu-text
+  font-family: 'Roboto', sans-serif
+  font-size: 24px
+  font-weight: 400
+  color: #adadad
+@media (max-width: 768px)
+  .wrapper
+    .header
+      nav.main-menu
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        li
+          padding-left: 5px

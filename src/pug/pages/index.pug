@@ -1,0 +1,122 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title WMRU test
+    link(rel="stylesheet", href="css/jquery-ui.min.css")
+    link(rel="stylesheet", href="css/styles.css")
+  body
+    .wrapper
+      .header
+        nav.main-menu
+          li
+            a.active(href='#') Личная информация
+          li 
+            a(href='#') Опыт
+          li
+            a(href='#') JavaScript
+          li
+            a(href='#') О себе
+        h1 Анкета
+      .content
+        form.profile#profile(action="")
+          .profile-info
+            .profile-icon.icon
+              img(src='img/icons/profile-icon.svg')
+            h2 Личная информация
+            .info
+              input.inputText(type="text" name="name" required)
+              span.floating-label ФИО
+            .select-box
+              select#year-of-birth(form='profile', name='year-of-birth')
+                option(value='') Год рождения
+                option(value='1998') 1998
+                option(value='1997') 1997
+                option(value='1996') 1996
+                option(value='1995') 1995
+                option(value='1994') 1994
+                option(value='1993') 1993
+                option(value='1992') 1992
+                option(value='1991') 1991
+                option(value='1990') 1990
+                option(value='1998') 1989
+                option(value='1997') 1988
+                option(value='1996') 1987
+                option(value='1995') 1986
+                option(value='1994') 1985
+                option(value='1993') 1984
+                option(value='1992') 1983
+                option(value='1991') 1982
+                option(value='1990') 1981
+            .info
+              input.inputText(type="text" name="location" required)
+              span.floating-label Место Проживания
+            .info
+              input.inputText(type="text" name="skype" required)
+              span.floating-label Skype
+            .info
+              input.inputText(type="text" name="email" required)
+              span.floating-label E-mail
+          .profile-experience
+            .profile-icon.icon
+              img(src='img/icons/experience-icon.svg')
+            h2 Расскажите о своем опыте 
+            ul
+              li
+                input(type="checkbox" id="exp01")
+                label(for="exp01") БЭМ/OOCSS
+              li
+                input(type="checkbox" id="exp02")
+                label(for="exp02") Stylus/LESS/SASS
+              li
+                input(type="checkbox" id="exp03")
+                label(for="exp03") Работаю с SVG
+              li
+                input(type="checkbox" id="exp04")
+                label(for="exp04") Верстаю семантично
+              li
+                input(type="checkbox" id="exp05")
+                label(for="exp05") ES2015/ES2016
+              li
+                input(type="checkbox" id="exp06")
+                label(for="exp06") Gulp/GRUNT
+              li
+                input(type="checkbox" id="exp07")
+                label(for="exp07") Webpack
+              li
+                input(type="checkbox" id="exp08")
+                label(for="exp08") jQuery
+              li
+                input(type="checkbox" id="exp09")
+                label(for="exp09") Ипользую Git
+          .profile-js-level
+            .js-level-icon.icon
+              img(src='img/icons/js-level-icon.svg')
+            h2 Уровень владения JavaScript
+            .level-range
+              ul
+                li
+                  label(for="") Не владею
+                li
+                  label(for="") Использую готовые решения
+                li
+                  label(for="") Использую готовые решения и умею и переделывать
+                li
+                  label(for="") Пишу сложный JS с нуля
+              input(type="range" min="1" max="4" value="3")
+          .profile-about-me
+            .profile-icon.icon
+              img(src='img/icons/about-me-icon.svg')
+            h2 Расскажите о себе
+            h3 
+              | Напишите несколько предложений, чем привлекла наша вакансия
+              br
+              | и что вы ожидаете от работы у нас.
+            textarea#about-me(name="about-me" placeholder="Понравилась тем, что...")
+            br
+            input(type="submit", class="btn", value="Готово")
+  
+script(src="js/libs.min.js")
+script(src="js/index.js")
