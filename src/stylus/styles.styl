@@ -6,6 +6,8 @@
   font-family: 'Roboto-Thin'
   src: url('../fonts/Roboto-Thin.ttf')  format('truetype') /* Safari, Android, iOS */
 //Reset
+&:focus
+  outline: 0 none
 body, html
   margin: 0
   padding: 0
@@ -188,6 +190,7 @@ h3
       padding-top: 135px
       text-align: center
       .level-range
+        background: url('../img/icons/range.svg') no-repeat left bottom
         ul
           clear: both
           height: 50px
@@ -201,8 +204,17 @@ h3
           li:last-child
             text-align: right
         input[type=range]
-          background: url('../img/icons/range.svg') no-repeat 0 0
           width: 100%
+          -webkit-appearance: none
+          #thumb
+            background-color: red
+        input[type=range]::webkit-media-slider-thumb,
+        input[type=range]::-webkit-slider-thumb
+          background-color: red
+          -webkit-appearance: none
+          box-sizing: border-box
+          display: block
+          -webkit-user-modify: read-only !important
     .profile-about-me
       padding-top: 75px
       padding-bottom: 75px
@@ -227,10 +239,12 @@ h3
   align-items: center
   height: 60px
   padding: 0
+  outline: 0 none
+#year-of-birth-button,
 #year-of-birth-button:focus
   border: 0 none
   outline: 0 none
-.ui-button.ui-state-active:hover
+.ui-selectmenu-open .ui-state-active
   border: 0 none
 .ui-selectmenu-text
   font-family: 'Roboto', sans-serif
